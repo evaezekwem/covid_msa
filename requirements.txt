@@ -1,0 +1,8 @@
+pandas
+numpy
+pyodbc
+urllib
+sqlalchemy
+fast_to_SQL
+flask
+pandasql
