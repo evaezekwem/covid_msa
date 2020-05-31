@@ -1,1 +1,0 @@
-python get_data.py
