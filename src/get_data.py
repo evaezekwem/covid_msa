@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 import os
+import subprocess
+from datetime import datetime as dt
+import time
 
 def fetch_data(url):
     """
@@ -145,6 +148,15 @@ def write_to_csv(df1,df2,path1,path2):
     return True
 
 
+def commit_to_git():
+    subprocess.call(f'git add .')
+    time.sleep(3)
+    subprocess.call(f'git commit -m "Data updated as at {dt.now().strftime("%d-%m-%Y")}"')
+    time.sleep(3)
+    subprocess.call('git push')
+    time.sleep(3)
+    
+    
 def main():
     url = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
     maps = os.path.join(os.pardir, 'data', 'fips_code_ref.xlsx')
@@ -161,7 +173,8 @@ def main():
     msa_cases, msa_deaths = get_format(all_msas_clean_df)
     
     write_to_csv(msa_cases,msa_deaths,path_cases,path_deaths)
-    
+
+    commit_to_git()
 
 if __name__ == '__main__':
     main()
