@@ -62,7 +62,7 @@ def get_db_engine():
     conn_str = 'mssql+pyodbc:///?odbc_connect={}'.format(params)
     
     try:
-        return create_engine(conn_str, echo=True, fast_executemany=True)
+        return create_engine(conn_str, echo=False, fast_executemany=True)
     except:
         raise
     
