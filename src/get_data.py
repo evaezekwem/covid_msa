@@ -149,12 +149,12 @@ def write_to_csv(df1,df2,path1,path2):
 
 
 def commit_to_git():
-    subprocess.call(f'git add .')
-    time.sleep(3)
-    subprocess.call(f'git commit -m "Data updated as at {dt.now().strftime("%d-%m-%Y")}"')
-    time.sleep(3)
-    subprocess.call('git push')
-    time.sleep(3)
+    subprocess.call('git add .', shell=True)
+    # time.sleep(3)
+    subprocess.call(f'git commit -m "Data updated as at {dt.now().strftime("%d-%m-%Y")}"', shell=True)
+    # time.sleep(3)
+    subprocess.call('git push', shell=True)
+    # time.sleep(3)
     
     
 def main():
