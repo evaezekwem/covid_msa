@@ -158,21 +158,21 @@ def commit_to_git():
     
     
 def main():
-    # url = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
-    # maps = os.path.join(os.pardir, 'data', 'fips_code_ref.xlsx')
-    # path_cases = os.path.join(os.pardir,'data','all_msas_cases.csv')
-    # path_deaths = os.path.join(os.pardir, 'data', 'all_msas_deaths.csv')
-    #
-    # raw_df = fetch_data(url)
-    # fips_df = pd.read_excel(maps, dtype={'Geo_FIPS': 'Int64', 'Geo_QName': 'str', 'County Pop 2018': 'Int64',
-    #                                  'Geo_STATE': np.int32, 'MSA': 'str', 'Unnamed: 5': 'str',
-    #                                  'Unnamed: 6': 'str', 'MSAs in the US (excluding Puerto Rico)': 'str'})
-    #
-    # all_msas_clean_df = clean_data(raw_df,fips_df)
-    #
-    # msa_cases, msa_deaths = get_format(all_msas_clean_df)
-    #
-    # write_to_csv(msa_cases,msa_deaths,path_cases,path_deaths)
+    url = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
+    maps = os.path.join(os.pardir, 'data', 'fips_code_ref.xlsx')
+    path_cases = os.path.join(os.pardir,'data','all_msas_cases.csv')
+    path_deaths = os.path.join(os.pardir, 'data', 'all_msas_deaths.csv')
+
+    raw_df = fetch_data(url)
+    fips_df = pd.read_excel(maps, dtype={'Geo_FIPS': 'Int64', 'Geo_QName': 'str', 'County Pop 2018': 'Int64',
+                                     'Geo_STATE': np.int32, 'MSA': 'str', 'Unnamed: 5': 'str',
+                                     'Unnamed: 6': 'str', 'MSAs in the US (excluding Puerto Rico)': 'str'})
+
+    all_msas_clean_df = clean_data(raw_df,fips_df)
+
+    msa_cases, msa_deaths = get_format(all_msas_clean_df)
+
+    write_to_csv(msa_cases,msa_deaths,path_cases,path_deaths)
 
     commit_to_git()
 
