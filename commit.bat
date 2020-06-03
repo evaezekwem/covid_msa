@@ -1,2 +1,1 @@
 python commit.py
-pause
