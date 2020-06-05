@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="605afd6a-0973-4b2e-8aa4-e6edde58b026" name="Default Changelist" comment="" />
+    <list default="true" id="605afd6a-0973-4b2e-8aa4-e6edde58b026" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/commit.bat" beforeDir="false" afterPath="$PROJECT_DIR$/src/commit.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/commit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pull.bat" beforeDir="false" afterPath="$PROJECT_DIR$/src/pull.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pull.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/pull.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +27,8 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/commit.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/commit.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
               <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
@@ -35,7 +40,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commit.bat">
+        <entry file="file://$PROJECT_DIR$/src/pull.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="11" selection-start-column="11" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pull.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/commit.bat">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="8" selection-start-column="8" selection-end-column="8" />
@@ -127,6 +150,8 @@
         <option value="$PROJECT_DIR$/src/get_data.py" />
         <option value="$PROJECT_DIR$/src/commit.py" />
         <option value="$PROJECT_DIR$/src/commit.bat" />
+        <option value="$PROJECT_DIR$/pull.bat" />
+        <option value="$PROJECT_DIR$/pull.py" />
       </list>
     </option>
   </component>
@@ -160,7 +185,11 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Eva\Google Drive\Admissions\NYU\Admitted\Projects\Marron Institute Covid\COVID19 Tracker By Metropolitan Statistical Areas (MSA) in US\marron-covid" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eva\Google Drive\Admissions\NYU\Admitted\Projects\Marron Institute Covid\COVID19 Tracker By Metropolitan Statistical Areas (MSA) in US\marron-covid\src" />
       <recent name="C:\Users\Eva\Google Drive\Admissions\NYU\Admitted\Projects\Marron Institute Covid\COVID19 Tracker By Metropolitan Statistical Areas (MSA) in US\marron-covid" />
     </key>
   </component>
@@ -386,20 +415,34 @@
     <entry file="file://$PROJECT_DIR$/src/commit.cmd">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/commit.bat">
+    <entry file="file://$PROJECT_DIR$/src/commit.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="8" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commit.py">
+    <entry file="file://$PROJECT_DIR$/src/commit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pull.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pull.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
         </state>
       </provider>
     </entry>
