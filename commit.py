@@ -1,5 +1,5 @@
 import subprocess
-import datetime.datetime as dt
+from datetime import datetime as dt
 
 subprocess.call('git add .', shell=True)
 # time.sleep(3)
