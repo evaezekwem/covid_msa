@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="605afd6a-0973-4b2e-8aa4-e6edde58b026" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/commit.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/commit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="605afd6a-0973-4b2e-8aa4-e6edde58b026" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +22,8 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/commit.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commit.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
               <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
@@ -38,8 +34,8 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/commit.bat">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/commit.bat">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="8" selection-start-column="8" selection-end-column="8" />
@@ -153,21 +149,6 @@
               <item name="marron-covid" type="b2602c69:ProjectViewProjectNode" />
               <item name="marron-covid" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="marron-covid" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marron-covid" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="marron-covid" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marron-covid" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="marron-covid" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marron-covid" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -177,6 +158,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eva\Google Drive\Admissions\NYU\Admitted\Projects\Marron Institute Covid\COVID19 Tracker By Metropolitan Statistical Areas (MSA) in US\marron-covid" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -319,7 +305,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.50397456" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -401,20 +386,20 @@
     <entry file="file://$PROJECT_DIR$/src/commit.cmd">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/commit.py">
+    <entry file="file://$PROJECT_DIR$/commit.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/commit.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
         </state>
       </provider>
     </entry>
