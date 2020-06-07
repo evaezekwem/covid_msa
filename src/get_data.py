@@ -111,6 +111,27 @@ def get_format(df, isUnallocated=False):
             sorted(msas_deaths.columns), axis=1).T
 
 
+def get_daily_new_cases_deaths(df1,df2):
+    """
+    Return DataFrames for daily new cases and deaths
+    :param df1 (DataFrame): DataFrame of cumulative cases of all msas by dates
+    :param df2 (DataFrame): DataFrame of cumulative deaths of all msas by dates
+    :return: (DataFrame,DataFrame)
+    """
+    pass
+
+
+def get_7day_avg_new_cases_deaths(df1,df2,isRounded=False):
+    """
+    Return DataFrames for daily new cases and deaths
+    :param df1 (DataFrame): DataFrame of daily new cases of all msas by dates
+    :param df2 (DataFrame): DataFrame of daily new deaths of all msas by dates
+    :param isRounded (Bool): A bool as to wether to round up results or report as float.
+    :return: (DataFrame,DataFrame)
+    """
+    pass
+
+
 def write_to_csv(df1,df2,path1,path2):
     """
     Writes data of cases and deaths to csv
