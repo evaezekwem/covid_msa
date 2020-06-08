@@ -1,9 +1,11 @@
 from flask import Flask
+from flask_cors import CORS
 import pandas as pd
 from pandasql import sqldf
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 cases_path = os.path.join(os.pardir,'data','all_msas_cases.csv')
 deaths_path = os.path.join(os.pardir,'data','all_msas_deaths.csv')

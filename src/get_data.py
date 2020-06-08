@@ -4,6 +4,7 @@ import os
 import subprocess
 from datetime import datetime as dt
 import time
+import math
 
 def fetch_data(url):
     """
@@ -118,8 +119,34 @@ def get_daily_new_cases_deaths(df1,df2):
     :param df2 (DataFrame): DataFrame of cumulative deaths of all msas by dates
     :return: (DataFrame,DataFrame)
     """
-    pass
+    all_cases_copy = df1.copy()
+    all_deaths_copy = df2.copy()
 
+    msas = all_cases_copy.index.tolist()
+    cols = ['2020-01-20']
+    cols.extend(all_cases_copy.columns)
+
+    all_cases_copy['2020-01-20'] = 0
+    all_deaths_copy['2020-01-20'] = 0
+
+    # all_cases_copy.head()
+    all_cases_copy = all_cases_copy[cols]
+    all_deaths_copy = all_deaths_copy[cols]
+
+    df1.columns = all_cases_copy.columns[:-1]
+    df2.columns = all_deaths_copy.columns[:-1]
+
+    new_daily_cases = df1 - all_cases_copy
+    new_daily_deaths = df2 - all_deaths_copy
+
+    new_daily_cases = new_daily_cases.drop(columns=cols[-1])
+    new_daily_deaths = new_daily_deaths.drop(columns=cols[-1])
+
+    new_daily_cases.columns = cols[1:]
+    new_daily_deaths.columns = cols[1:]
+
+    return new_daily_cases, new_daily_deaths
+    
 
 def get_7day_avg_new_cases_deaths(df1,df2,isRounded=False):
     """
@@ -129,8 +156,15 @@ def get_7day_avg_new_cases_deaths(df1,df2,isRounded=False):
     :param isRounded (Bool): A bool as to wether to round up results or report as float.
     :return: (DataFrame,DataFrame)
     """
-    pass
+    new_daily_cases_7day_average = df1.rolling(window=7, axis=1).mean()
+    new_daily_deaths_7day_average = df2.rolling(window=7, axis=1).mean()
 
+    if isRounded:
+        new_daily_cases_7day_average = new_daily_cases_7day_average[df1.columns[7:]].applymap(lambda x: math.ceil(x))
+        new_daily_deaths_7day_average = new_daily_deaths_7day_average[df2.columns[7:]].applymap(lambda x: math.ceil(x))
+    
+    return new_daily_cases_7day_average, new_daily_deaths_7day_average
+    
 
 def write_to_csv(df1,df2,path1,path2):
     """
@@ -169,20 +203,15 @@ def write_to_csv(df1,df2,path1,path2):
     return True
 
 
-def commit_to_git():
-    subprocess.call('git add .', shell=True)
-    # time.sleep(3)
-    subprocess.call(f'git commit -m "Data updated as at {dt.now().strftime("%d-%m-%Y")}"', shell=True)
-    # time.sleep(3)
-    subprocess.call('git push', shell=True)
-    # time.sleep(3)
-    
-    
 def main():
     url = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
     maps = os.path.join(os.pardir, 'data', 'fips_code_ref.xlsx')
     path_cases = os.path.join(os.pardir,'data','all_msas_cases.csv')
     path_deaths = os.path.join(os.pardir, 'data', 'all_msas_deaths.csv')
+
+    path_day_avg_cases = os.path.join(os.pardir, 'data', '7day_avg_cases.csv')
+    path_day_avg_deaths = os.path.join(os.pardir, 'data', '7day_avg_deaths.csv')
+
 
     raw_df = fetch_data(url)
     fips_df = pd.read_excel(maps, dtype={'Geo_FIPS': 'Int64', 'Geo_QName': 'str', 'County Pop 2018': 'Int64',
@@ -192,10 +221,14 @@ def main():
     all_msas_clean_df = clean_data(raw_df,fips_df)
 
     msa_cases, msa_deaths = get_format(all_msas_clean_df)
-
+    
+    daily_cases, daily_deaths = get_daily_new_cases_deaths(msa_cases,msa_deaths)
+    
+    cases_7day_avg, deaths_7day_avg = get_7day_avg_new_cases_deaths(daily_cases,daily_deaths)
+    
     write_to_csv(msa_cases,msa_deaths,path_cases,path_deaths)
-
-    commit_to_git()
+    
+    write_to_csv(cases_7day_avg, deaths_7day_avg,path_day_avg_cases, path_day_avg_deaths)
 
 if __name__ == '__main__':
     main()
