@@ -1,11 +1,11 @@
 from flask import Flask
-from flask_cors import CORS
+# from flask_cors import CORS
 import pandas as pd
 from pandasql import sqldf
 import os
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 
 cases_path = os.path.join(os.pardir,'data','all_msas_cases.csv')
 deaths_path = os.path.join(os.pardir,'data','all_msas_deaths.csv')
@@ -25,4 +25,5 @@ def deaths():
 
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0", port=3444, debug=True)
+#     app.run(host="0.0.0.0", port=3444, debug=True)
+    app.run()
